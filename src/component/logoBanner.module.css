@@ -1,0 +1,38 @@
+.Banners{
+    display : flex;
+    
+    overflow-x: hidden;
+    height:5em;
+    align-items: center;
+    background-color: #fff;
+    
+}
+
+.Banners:hover{
+    animation-play-state: paused;
+}
+div.Banners>*{
+    margin:0 1em;
+    
+}
+
+@keyframes slide {
+    from {
+        transform : translateX (0)
+    }
+    to {
+        transform : translateX(-1400%)
+    }
+}
+
+
+
+.Bannerslide{
+    animation:35s slide infinite linear;
+}
+
+.Bannerslide img{
+margin:0 3em;
+}
+
+

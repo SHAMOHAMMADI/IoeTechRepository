@@ -1,0 +1,228 @@
+.Text{
+    
+}
+
+.SidebarHome{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/* 
+div.SidebarHome>*{
+    border:1px solid black;
+    margin:1em;
+    height:fit-content;
+    padding:1em;
+} */
+
+.Home{
+    min-height: 100vh;
+    width:100%;
+}
+
+.HomeMain{
+   display: flex;
+   width:100%;
+   /* height: 100vh; */
+   /* flex-direction: row; */
+   justify-content: space-evenly;
+   /* border:1px solid black; */
+   background-color:#fff;
+
+
+   
+}
+
+.Sidebar2{
+    display: flex;
+    margin:1em;
+    flex-direction: column;
+    align-items: flex-end;
+    /* border:1px solid black; */
+    width:30%;
+    
+}
+
+div.Sidebar2>*{
+}
+
+.Cart{
+    display: flex;
+justify-content:space-evenly;
+/* align-items: center; */
+    /* margin:1em; */
+    /* width:100%; */
+    height:100%;
+    flex-direction: row;
+    /* border-right: 1px solid lightgrey; */
+    flex-wrap: wrap;
+    width:100%;
+    
+}
+.Cart>*{
+    border-right:1px solid lightgrey;
+
+}
+
+
+.LogoBanner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.LearningBanner{
+    background-image: url('../../public/images/29.jpg');
+    width:100%;
+    height:14em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* border:1px solid grey; */
+
+}
+.secondBanner{
+    background-color: #fff;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: #f6f6f6;
+    height:10em;
+    padding:1em 0;
+    border:1px solid lightgrey;
+
+    
+   
+}
+.secondBanner img{
+    margin:0.2em 0;
+}
+
+.secondBanner p {
+    color:#333;
+    font-size: 0.9em;
+}
+
+.secondBanner>*{
+    width:4em;
+    height:4em;
+    text-align: center;
+    
+}
+
+
+.HomeBody{
+    width:100%;
+}
+
+.rasberry{
+    display:flex;
+    justify-content:space-evenly;
+    background-color: #e5e5e5;
+}
+
+.rasberry button{
+    
+}
+.rasberry img{
+    /* height:50%; */
+    width:50%;
+    /* margin:2em; */
+}
+ 
+.rasLogo{
+   /* background-color: #f5f5f5; */
+
+}
+.button{
+    background-color: #33f;
+    border-radius: 8px;
+    padding: 0.5em;
+    color:#fff;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding:0.3em 1em;
+    margin:0.5em 0;
+}
+
+
+.rasbannerText{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:2em;
+    align-items: center;
+}
+
+
+.Banner3{
+    width:100%;
+    border:1px solid lightgrey;
+}
+.Banner3 img{
+    width:100%;
+    height:60%;
+
+}
+@media screen and (max-width:320px){
+    
+    .caroHome{
+        
+        
+        display:none;
+       
+         
+        }
+   .Cart{
+display:flex;
+justify-content: center;
+width:100%;
+margin: 0 auto;
+align-items: center;
+/* border:1px solid black; */
+ }
+
+   .Footer{
+   /* display: none; */
+
+   }
+   .Home{
+   width:100%;
+   
+   
+   }
+   .HomeMain{
+    display:flex;
+    justify-content: center;
+    padding:0 auto;
+   /* border:1px solid black; */
+   width:100%;
+   
+
+   }
+   .Sidebar2{
+    display: none;
+   }
+
+  
+}
+@media screen and (max-width:768px){
+    .LearningBanner{
+        display:none;
+    
+    }
+
+}
+
+@media screen and (max-width:1200px){
+   .pro{
+    width:100%;
+   }
+   
+    
+
+   }
+   

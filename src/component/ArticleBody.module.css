@@ -1,0 +1,16 @@
+.ArticleBodyp , .ArticleBodyh3{
+    text-align: right;
+    text-align-last: justify;
+}
+.ArticleBody{
+    border:1px solid;
+    margin:0.3em;
+    padding:0.5em;
+
+
+}
+
+.ArticleBodyp{
+    text-align: justify;
+    text-align: end;
+}

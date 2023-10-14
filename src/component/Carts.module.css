@@ -1,0 +1,22 @@
+.Carts{
+    background-color:fff;
+    width:100%;
+    min-height: fit-content;
+}
+
+
+.Carts{
+    /* border:1px solid black; */
+    padding:1em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:1em;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+div.Carts>*{
+    margin:1em;
+}

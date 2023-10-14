@@ -1,0 +1,11 @@
+.About{
+    text-align: justify;
+    text-align-last: right;
+    line-height: 2em;
+    padding:1em;
+}
+
+.About p{
+    text-indent: 1em;
+
+}

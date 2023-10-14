@@ -1,0 +1,102 @@
+.ContactUs{
+    height:100%;
+    width:100%;
+    background-color: #fff;
+    display :flex;
+    flex-direction: column;
+    width:30em;
+    justify-content: center;
+    align-items: center;
+    margin:0.3em auto;
+    text-align: right;
+    padding:4em 4em 4em ;
+   
+
+}
+
+.Form{
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    padding:1em 2em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    justify-content: center;
+    color:#525252;
+    
+}
+
+.ContactUs input {
+    outline: none;
+    width:23em;
+    background-color: #dfdfdf;
+    margin:1em 2em;
+    border-radius: 10px;
+    height:2em;
+    text-align: right;
+    padding:0 1em;
+    
+}
+
+.Form button {
+    background-color:#246c9d ;
+    width:7em;
+    border-radius: 15px;
+    height:2em;
+    color:#fff;
+
+
+}
+
+textarea{
+    background-color: #dfdfdf;
+    border-radius: 5px;
+    height:10em;
+    width:23em;
+    margin: 0 auto;
+
+
+}
+
+.Button{
+    display: flex;
+    justify-content: center;
+    margin:1em 0;
+}
+
+
+@media screen and (max-width : 320px){
+    .ContactUs{
+        width:10%;
+        /* border:1px solid black; */
+    }
+.Form{
+    width:15em;;
+    /* margin:auto; */
+    /* border:1px solid black; */
+    margin: 0;
+
+}
+.Form input {
+    width:100%;
+    margin:auto;
+}
+
+textarea{
+    background-color: #dfdfdf;
+    border-radius: 5px;
+    height:10em;
+    width:100%;
+    margin: 0 auto;
+
+
+}
+
+
+
+}
+@media screen and (max-width:769px){
+
+}
+@media screen and (max-width:1200px){
+
+}

@@ -1,0 +1,45 @@
+/* .test{
+    border:1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+} */
+
+.top1{
+    display:none;
+}
+/* 
+.top1 li {
+    
+    margin: 0 1em;
+} */
+
+.top1 .is-open {
+    display : block;
+}
+
+
+
+.cart{
+    border:1px solid lightgrey;
+    width:200px;
+    position:relative;
+
+    left:3em;
+    height:20em;
+
+}
+
+.cartImage{
+    /* border:1px solid lightgrey; */
+    width:70%;
+    position:absolute;
+    left:2em;
+    top:2em;
+}
+
+.cartImageDiscount{
+    position:absolute;
+    left:1em;
+    top:2em;
+    width:25%;
+}
