@@ -1,8 +1,7 @@
-import NavBar from NavBar.module.css
-const NavBar = ()=>{
-    return (
-        <>
+import React from 'react'
 
-        </>
-    )
+export default function NavBar() {
+  return (
+    <div>NavBar</div>
+  )
 }
