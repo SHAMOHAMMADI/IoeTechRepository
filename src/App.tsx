@@ -14,7 +14,24 @@ import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import ArticleBody from './component/ArticleBody';
 import LearningBody from './component/LearningBody';
+import {useState} from 'react';
+import { createContext } from 'react';
+
+
+export type myProps = [
+  isLogin ?: true ,
+  setIsLogin ?: ()=>void
+]
+// export  const AppContext = createContext<myProps>({
+//   isLogin : true,
+//   setIsLogin ?: ()=>void
+// });
+
+export const AppContext = createContext({} as myProps)
+
 function App() {
+
+ const  [isLogin , setIsLogin] = useState<boolean>(false)
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +43,7 @@ function App() {
         <div  className="bg-blue-700">600</div> */}
     
       </header>
+      {/* <AppContext.Provider value={{isLogin , setIsLogin}}> */}
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
@@ -40,6 +58,7 @@ function App() {
         <Route path="/Article1" element ={<ArticleBody/>}/>
         <Route path="/learningBody" element={<LearningBody/>}/>
       </Routes>
+    {/* </AppContext.Provider>~ */}
     </div>
   );
 }

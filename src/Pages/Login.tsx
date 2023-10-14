@@ -32,7 +32,7 @@ export default function Login() {
 
                      <p>Forget password</p>
                      <button>ورود</button>
-
+~
                 </form>
 
              <div className={styled.SocialMedia}>

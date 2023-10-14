@@ -15,6 +15,7 @@ import { LIST_DATA, ListData } from "../component/Test2";
 import ProductsCart from "../component/ProductsCart";
 import LogoBanner from "../component/LogoBanner";
 import LearningComponent from "../component/LearningComponent";
+import {useContext} from 'react'
 
 import img1 from "../help.png";
 import img2 from "../delivery.png";
@@ -24,7 +25,7 @@ import img5 from "../back3.png";
 import ras from '../hero.webp'
 import rasLogo from '../rasLogo.png'
 import banner3 from '../banner3.png'
-
+import {AppContext} from '../../src/App'
 export type websiteProps = {
   id?: number;
   company?: string;
@@ -43,6 +44,11 @@ interface user {
   URL?: string;
 }
 
+type loginProps={
+  isLogin ?: boolean ,
+  setIsLogin ?: ()=>void
+}
+
 export default function Home({
   id,
   company,
@@ -52,6 +58,8 @@ export default function Home({
   URL,
 }: websiteProps) {
   const [ini, setIni] = useState(LIST_DATA);
+
+//  const {isLogin , setIsLogin} = useContext(AppContext)
 
   return (
     <div className={styled.Home}>
