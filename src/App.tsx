@@ -1,23 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+        <p className="text-3xl font-bold ">
+          Test
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <div  className="bg-blue-100">100</div>
+        <div  className="bg-blue-200">200</div>
+        <div  className="bg-blue-300">300</div>
+        <div  className="bg-blue-400">400</div>
+        <div  className="bg-blue-600">500</div>
+        <div  className="bg-blue-700">600</div> */}
+
       </header>
     </div>
   );
