@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
 import axios from "axios";
+// import TestSign from "./testSign";
 
 export type signProps = {
   e?: any;
@@ -17,10 +18,10 @@ export type signProps = {
 };
 
 export type User = {
-  name: String;
-  lName: String;
-  password: any;
-  email: String;
+  name: string;
+  lName: string;
+  password: number;
+  email: string;
 };
 
 export default function Login() {
@@ -32,7 +33,7 @@ export default function Login() {
   // });
 
   const [name, setName] = useState("");
-  const [lname, setLname] = useState("");
+  const [lname, setLname] = useState({});
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState<User | null>(null);
@@ -54,9 +55,19 @@ export default function Login() {
   };
 
   const onLogin = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
-    axios.post("")
+    // e.preventDefault();
 
+    axios.post("http://localhost:8001/info", {
+      ...user,
+      name: name,
+      lName: lname,
+      password: password,
+      email: email,
+    });
+
+    const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
+
+    console.log(user);
     // setUser({
     //   name: name,
     //   lName: lname,
@@ -141,6 +152,10 @@ export default function Login() {
                   <FaYoutube />
                 </Link>
               </div>
+              {/* 
+              <div className="testSignUp">
+                <TestSign />
+              </div> */}
 
               <p>حساب کاربری ندارید ؟</p>
               <Link to="/login">
