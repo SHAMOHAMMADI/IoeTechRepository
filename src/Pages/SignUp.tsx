@@ -5,10 +5,66 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import Footer from "../component/Footer";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
+import axios from "axios";
+
+export type signProps = {
+  e?: any;
+  name?: string;
+};
+
+export type User = {
+  name: String;
+  lName: String;
+  password: any;
+  email: String;
+};
+
 export default function Login() {
+  // const [inputs, setInputs] = useState({
+  //   name : "",
+  //   lname : "",
+  //   email : "" ,
+  //   password : ""
+  // });
+
+  const [name, setName] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState<User | null>(null);
+
+  const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const onLnameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLname(e.target.value);
+  };
+
+  const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const onLogin = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    axios.post("")
+
+    // setUser({
+    //   name: name,
+    //   lName: lname,
+    //   password: password,
+    //   email: email,
+    // });
+  };
+
   return (
     <>
       <NavBar />
@@ -22,30 +78,53 @@ export default function Login() {
             <div>
               <form action="submit" className={styled.FormLogin}>
                 <label htmlFor="ّfirstName"></label>
-                <input type="text" name="" id="firstName" placeholder="نام" />
+                <input
+                  type="text"
+                  name="name"
+                  onChange={onNameChange}
+                  id="firstName"
+                  placeholder="نام"
+                />
 
                 <label htmlFor="lastName"></label>
                 <input
                   type="text"
-                  name=""
+                  onChange={onLnameChange}
+                  name="lName"
                   id="lastName"
                   placeholder=" نام خانوادگی"
                 />
 
                 <label htmlFor="email"></label>
-                <input type="email" name="" id="email" placeholder="ایمیل" />
+                <input
+                  type="password"
+                  onChange={onPasswordChange}
+                  name="password"
+                  id="password"
+                  placeholder="پسورد"
+                />
 
                 <label htmlFor="password"></label>
                 <input
-                  type="password"
-                  name=""
-                  id="password"
-                  placeholder="رمز عبور"
+                  onChange={onEmailChange}
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="ایمیل"
                 />
 
                 <p>Forget password</p>
 
-                <button>ثبت نام</button>
+                <button onClick={onLogin}>ثبت نام</button>
+
+                {/* {user ? (
+                  <div>
+                    <p>{user?.name}</p>
+                    <p>{user?.lName}</p>
+                    <p>{user?.password}</p>
+                    <p>{user?.email}</p>
+                  </div>
+                ) : null} */}
               </form>
 
               <div className={styled.SocialMedia}>
