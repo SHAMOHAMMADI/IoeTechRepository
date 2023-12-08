@@ -6,6 +6,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import Footer from "../component/Footer";
 import { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
@@ -54,8 +55,11 @@ export default function Login() {
     setEmail(e.target.value);
   };
 
+  const Navigate = useNavigate();
   const onLogin = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    // e.preventDefault();
+    e.preventDefault();
+
+    Navigate('/');
 
     axios.post("http://localhost:8001/info", {
       ...user,
@@ -63,18 +67,24 @@ export default function Login() {
       lName: lname,
       password: password,
       email: email,
-    });
-
+    })
+    
+        // setUser({
+       
+        //   name: name,
+        //   lName: lname,
+        //   password: password,
+        //   email: email,
+        // });
+      };
     const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
 
-    console.log(user);
-    // setUser({
-    //   name: name,
-    //   lName: lname,
-    //   password: password,
-    //   email: email,
-    // });
+    
+    const goToSecondsComp = () => {
+ 
+      // This will navigate to second component
   };
+
 
   return (
     <>
