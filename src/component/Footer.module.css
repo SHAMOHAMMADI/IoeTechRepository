@@ -1,285 +1,267 @@
-body{
-    position:relative;
-    /* min-height:100%; */
+body {
+  position: relative;
+  /* min-height:100%; */
 }
-.Footer{
-display:flex;
-flex-direction:column;
-justify-content:space-evenly;
-text-align: center;
-/* align-items: center */
-border-radius: 5px;
-box-shadow: #64646f33 0px 7px 29px 0px;
-margin-top:auto;
-position:relative;
-bottom:0;
-left:0;
-width:100%;
-color:#ffffff;
-/* overflow: auto; */
-
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  /* align-items: center */
+  border-radius: 5px;
+  box-shadow: #64646f33 0px 7px 29px 0px;
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #ffffff;
+  /* overflow: auto; */
 }
-.FooterLeft{
-background-color: aquamarine;
-padding:0.5em 2em;
-width:100%;
+.FooterLeft {
+  background-color: aquamarine;
+  padding: 0.5em 2em;
+  width: 100%;
 }
-.FooterCenter{
-    background-color: rgb(64, 207, 159);
-    padding:0.5em 2em;
-width:100%;
-
-
+.FooterCenter {
+  background-color: rgb(64, 207, 159);
+  padding: 0.5em 2em;
+  width: 100%;
 }
-.FooterRight{
-    background-color: rgb(37, 167, 124);
-padding:0.5em 2em;
-width:100%;
-
-
+.FooterRight {
+  background-color: rgb(37, 167, 124);
+  padding: 0.5em 2em;
+  width: 100%;
 }
 
-
-.FooterTop{
-    display:flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    border-bottom:1px solid white;
-    justify-content: space-evenly;
-    background-color: #333333;
-    width:100%;
-    height:12em;
-    font-size: 0.7em;
-    font-weight: 500;
-    text-align: right;
-    line-height: 1.8;
+.FooterTop {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-bottom: 1px solid white;
+  justify-content: space-evenly;
+  background-color: #333333;
+  width: 100%;
+  height: 12em;
+  font-size: 0.7em;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.8;
 }
-.CopyRight{
-    display:flex;
-    flex-direction: column;
-    background-color: #333333;
-    justify-content: center;
-    padding:0.5em;
-
+.CopyRight {
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  justify-content: center;
+  padding: 0.5em;
 }
-.SocialMedia{
-    display:flex;
-    margin:0.3em;
-    justify-content: center;
-
+.SocialMedia {
+  display: flex;
+  margin: 0.3em;
+  justify-content: center;
 }
 
-div.SocialMedia>*{
-    font-size: 2em;
-    margin:0.5em;
+div.SocialMedia > * {
+  font-size: 2em;
+  margin: 0.5em;
 }
 
-.TimeIcon{
+.TimeIcon {
   display: flex;
   align-items: center;
-  
 }
 
-.Icon1{
-    font-size: 2.7em;;
-    margin:0 0.4em;
+.Icon1 {
+  font-size: 2.7em;
+  margin: 0 0.4em;
 }
 
-.Email{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
+.Email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.EmailIcon{
-    font-size: 2.7em;
-    margin:0 0.4em;
-}
-
-.Contact{
-    display:flex;
-    justify-content: row;
-    align-items: center;
+.EmailIcon {
+  font-size: 2.7em;
+  margin: 0 0.4em;
 }
 
-.PhoneIcon{
-    font-size: 2.7em;
-    margin:0 0.4em;
+.Contact {
+  display: flex;
+  justify-content: row;
+  align-items: center;
 }
 
-.Location{
-    display:flex;
-    align-items: center;
+.PhoneIcon {
+  font-size: 2.7em;
+  margin: 0 0.4em;
 }
 
-.LocationIcon{
-    font-size: 2em;
-    margin:0 0.4em;
+.Location {
+  display: flex;
+  align-items: center;
 }
 
-
-.FooterInfo{
-    background-color: #333333;
-    display:flex;
-    height:12em;
-    justify-content:space-evenly;
-    flex-direction:row-reverse;
-    padding: 1em 0 0 0 ;
-
+.LocationIcon {
+  font-size: 2em;
+  margin: 0 0.4em;
 }
-.FooterInfo1{
-display:flex;
-flex-direction: column;
+
+.FooterInfo {
+  background-color: #333333;
+  display: flex;
+  height: 12em;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  padding: 1em 0 0 0;
+}
+.FooterInfo1 {
+  display: flex;
+  flex-direction: column;
 }
 .FooterInfo1 .Text1 {
-    display:flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.FooterInfo2 .Text2{
-    display:flex;
-    flex-direction: column;
-
+.FooterInfo2 .Text2 {
+  display: flex;
+  flex-direction: column;
 }
-.FooterInfo3 .Text3{
-    display:flex;
-    flex-direction: column;
-
+.FooterInfo3 .Text3 {
+  display: flex;
+  flex-direction: column;
 }
-.FooterInfo4 .Text4{
-    display:flex;
-    flex-direction: column;
-
-}
-.Text1 , .Text2 , .Text3 , .Text4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    font-size: 2.7em;
-    margin:0.3em 0 0 0 ;
-}
-.Text1 p , .Text2 p , .Text3 p , .Text4 p{
-    display: flex;
-    font-size: 0.5em;
-    flex-direction: row-reverse;
-    align-items: center;
-
+.FooterInfo4 .Text4 {
+  display: flex;
+  flex-direction: column;
 }
 
-.FooterInfo{
-    border-bottom: 1px solid #ffffff;
-} 
-
-.FooterDetails{
-    background-color: #333333;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size: 0.8em;
-    width:100%;
-    justify-content: space-evenly;
-    border-bottom: 1px solid #ffffff;
-
+.FooterInfo {
+  height: fit-content;
+  padding: 20px 5px;
 }
-.FooterDetails p{
-    width:100%;
-    text-align:justify;
-    text-align-last:right;
-
+.Text1,
+.Text2,
+.Text3,
+.Text4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 0.3em 0 0 0;
+  line-height: 1.5em;
+  font-size: 2em;
 }
 
-div.FooterDetails >* {
-    width:33%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding:1.5em;
-
+.Text1 p,
+.Text2 p,
+.Text3 p {
+  display: flex;
+  font-size: 0.5em;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.Text4 p {
+  font-size: 0.6em;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  line-height: 1.2em;
 }
 
-.Nemad{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width:100%;
-    
+.FooterInfo {
+  border-bottom: 1px solid #ffffff;
 }
 
-div.Nemad>*{
-    text-align: center;
-    padding-bottom: 1.5em;
-    /* border: 1px solid white; */
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.FooterDetails {
+  background-color: #333333;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 0.8em;
+  width: 100%;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #ffffff;
+}
+.FooterDetails p {
+  width: 100%;
+  text-align: justify;
+  text-align-last: right;
 }
 
+div.FooterDetails > * {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+}
 
+.Nemad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
 
+div.Nemad > * {
+  text-align: center;
+  padding-bottom: 1.5em;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* for responsive */
 
+@media screen and (max-width: 320px) {
+  .FooterTop {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+  }
+  div.FooterTop > * {
+    border-bottom: 0.5px solid rgb(213, 209, 209);
+    margin: 1em;
+  }
+  .CopyRight {
+    display: flex;
+    flex-direction: column;
+  }
+  .FooterInfo {
+    display: none;
+  }
+  .FooterDetails {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .FooterTop {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+  }
+  div.FooterTop > * {
+    border-bottom: 0.5px solid rgb(213, 209, 209);
+    margin: 1em;
+  }
+  .CopyRight {
+    display: flex;
+    flex-direction: column;
+  }
+  .FooterInfo {
+    display: none;
+  }
+  .FooterDetails {
+    display: none;
+  }
+}
 
-@media screen and (max-width:320px){
-    .FooterTop {
-        display:flex;
-        flex-direction: column;
-        height:auto;
-        padding:1em;
-    }
-    div.FooterTop>*{
-        border-bottom: 0.5px solid rgb(213, 209, 209);
-        margin:1em;
-    }
-    .CopyRight{
-        display:flex;
-        flex-direction: column;
-
-    }
-    .FooterInfo{
-        display:none;
-    }
-    .FooterDetails{
-        display:none;
-    }
-
-  
-   }
-   
-
-@media screen and (max-width:768px){
-
-    .FooterTop {
-        display:flex;
-        flex-direction: column;
-        height:auto;
-        padding:1em;
-    }
-    div.FooterTop>*{
-        border-bottom: 0.5px solid rgb(213, 209, 209);
-        margin:1em;
-    }
-    .CopyRight{
-        display:flex;
-        flex-direction: column;
-
-    }
-    .FooterInfo{
-        display:none;
-    }
-    .FooterDetails{
-        display:none;
-    }
-
-  
-   }
-
-@media screen and (max-width:1200px){
-   
-   
-    
-
-   }
-   
+@media screen and (max-width: 1200px) {
+}

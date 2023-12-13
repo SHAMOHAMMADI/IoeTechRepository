@@ -31,34 +31,33 @@ export default function NavBar(props: NavBarProps) {
       <div className={styled.header}>
         <div className={styled.NavBar769}>
           <div className={styled.TopTopMenu}>
-
-          <div className={styled.imageSearch}>
-            <Link to="/home">
-              <img src={logoiotech} alt="logo" />
-            </Link>
-          </div>
-          <div className={styled.Menu}>
-            <div className={styled.basket}>
-              <button>
-                <RiShoppingCartLine />
-              </button>
-              <button>
-                <Link to="/SignUp">
-                  <p>ورود | ثبت نام</p>
-                </Link>
-
-                <CgEnter />
-              </button>
-              <form action="submit" className={styled.Form}>
-                <input type="text" placeholder="جستجو" />
-                <button className={styled.button}>
-                  <Link to="/aboutus">
-                    <IoIosSearch />
-                  </Link>
-                </button>
-              </form>
+            <div className={styled.imageSearch}>
+              <Link to="/home">
+                <img src={logoiotech} alt="logo" />
+              </Link>
             </div>
-          </div>
+            <div className={styled.Menu}>
+              <div className={styled.basket}>
+                <button>
+                  <RiShoppingCartLine />
+                </button>
+                <button>
+                  <Link to="/SignUp">
+                    <p>ورود | ثبت نام</p>
+                  </Link>
+
+                  <CgEnter />
+                </button>
+                <form action="submit" className={styled.Form}>
+                  <input type="text" placeholder="جستجو" />
+                  <button className={styled.button}>
+                    <Link to="/aboutus">
+                      <IoIosSearch />
+                    </Link>
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
 
           <div className={styled.MenuBar}>
