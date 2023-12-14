@@ -10,6 +10,9 @@ import { IoHomeOutline } from "react-icons/io5";
 import "./NavBarTest.css";
 import { RiMenuFill } from "react-icons/ri";
 import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "./Context/UserContextProvider";
+import { LoginContext } from "./Context/LoginUserContext";
 
 export interface NavBarProps {
   onClick?: () => void;
@@ -25,6 +28,11 @@ export default function NavBar(props: NavBarProps) {
     setIsOpen((open) => !open);
     // onClick && onClick();
   };
+
+  const userContext = useContext(UserContext);
+  const LoginUserContext = useContext(LoginContext);
+
+  console.log(userContext.user);
   return (
     <div className={styled.AllNavBar}>
       <div className={styled.ad}></div>
@@ -41,12 +49,21 @@ export default function NavBar(props: NavBarProps) {
                 <button>
                   <RiShoppingCartLine />
                 </button>
+                <button
+                  onClick={() => {
+                    LoginUserContext.setIsLogin(false);
+                  }}
+                >
+                  <Link to="/LogIn">
+                    {LoginUserContext.login ? <p>خروج</p> : <p> ورود</p>}
+                  </Link>
+                  <CgEnter />
+                </button>
                 <button>
                   <Link to="/SignUp">
-                    <p>ورود | ثبت نام</p>
+                    <p>نام</p>
+                    <p>ثبت</p>
                   </Link>
-
-                  <CgEnter />
                 </button>
                 <form action="submit" className={styled.Form}>
                   <input type="text" placeholder="جستجو" />
@@ -56,6 +73,8 @@ export default function NavBar(props: NavBarProps) {
                     </Link>
                   </button>
                 </form>
+
+                <div>{userContext?.user}</div>
               </div>
             </div>
           </div>

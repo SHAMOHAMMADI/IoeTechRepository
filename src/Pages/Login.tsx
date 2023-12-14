@@ -8,7 +8,14 @@ import Footer from "../component/Footer";
 
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
+import { useEffect } from "react";
+import axios from "axios";
 export default function Login() {
+  useEffect(() => {
+    axios.get("http://localhost:7100/info").then((res) => {
+      console.log(res);
+    });
+  }, []);
   return (
     <>
       <NavBar />

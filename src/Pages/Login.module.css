@@ -1,5 +1,5 @@
  .AllLogin{
-    background: linear-gradient(69deg, #6812CB, #2674FC);
+    /* background: linear-gradient(69deg, #6812CB, #2674FC);
 background-size: 4000% 400%;
 
 -webkit-animation: AnimationName 3s ease infinite;
@@ -22,6 +22,16 @@ animation: AnimationName 3s ease infinite;
 50%{background-position:100% 49%}
 100%{background-position:0% 52%}
 }
+ */
+
+
+background: rgb(240, 240, 247);
+background: radial-gradient(
+  circle,
+  rgba(240, 240, 247, 1) 0%,
+  rgba(225, 225, 240, 1) 22%,
+  rgba(0, 212, 255, 1) 100%
+) 
 
 
 }

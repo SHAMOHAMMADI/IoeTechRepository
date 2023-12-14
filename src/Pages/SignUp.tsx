@@ -5,8 +5,10 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import Footer from "../component/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { LoginContext } from "../component/Context/LoginUserContext";
+import { UserContext } from "../../src/component/Context/UserContextProvider";
 
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
@@ -26,17 +28,20 @@ export type User = {
 };
 
 export default function Login() {
-  // const [inputs, setInputs] = useState({
-  //   name : "",
-  //   lname : "",
-  //   email : "" ,
-  //   password : ""
-  // });
+  const LoginUseContext = useContext(LoginContext);
+  const userContext = useContext(UserContext);
+
+  const [inputs, setInputs] = useState({
+    name: "",
+    lname: "",
+    email: "",
+    password: "",
+  });
 
   const [name, setName] = useState("");
-  const [lname, setLname] = useState({});
+  const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState<number | string>("");
   const [user, setUser] = useState<User | null>(null);
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,32 +64,32 @@ export default function Login() {
   const onLogin = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
-    Navigate('/');
-
-    axios.post("http://localhost:8001/info", {
+    axios.post("http://localhost:7100/info", {
       ...user,
       name: name,
       lName: lname,
       password: password,
       email: email,
-    })
-    
-        // setUser({
-       
-        //   name: name,
-        //   lName: lname,
-        //   password: password,
-        //   email: email,
-        // });
-      };
-    const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
+    });
 
-    
-    const goToSecondsComp = () => {
- 
-      // This will navigate to second component
+    Navigate("/shopping");
+    // setUser({
+    //   name: name,
+    //   lName: lname,
+    //   password: password,
+    //   email: email,
+    // });
+
+    LoginUseContext.setIsLogin(true);
+    userContext.setUser(() => {
+      
+    });
   };
+  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
 
+  const goToSecondsComp = () => {
+    // This will navigate to second component
+  };
 
   return (
     <>
