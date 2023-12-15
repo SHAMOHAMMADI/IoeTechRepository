@@ -12,7 +12,6 @@ export default function Article() {
     <NavBar/>
     <LogoBanner/>
     <div className={styled.topArticles}>
-
     <div className={styled.Articles}>
       <Link to="/Article1">
       <ArticleCarts/>

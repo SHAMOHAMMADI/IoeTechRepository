@@ -48,6 +48,7 @@ function App() {
           <Route path="/Test4" element={<Test4 />} />
           <Route path="/Article1" element={<ArticleBody />} />
           <Route path="/learningBody" element={<LearningBody />} />
+          <Route path="/SubLearning" element={<LearningBody />} />
         </Routes>
         {/* </AppContext.Provider>~ */}
         </LoginUserContextProvider>

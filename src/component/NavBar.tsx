@@ -59,12 +59,12 @@ export default function NavBar(props: NavBarProps) {
                   </Link>
                   <CgEnter />
                 </button>
-                <button>
+                <button className={styled.ButtonStyle2}>
                   <Link to="/SignUp">
-                    <p>نام</p>
-                    <p>ثبت</p>
+                    <p> ثبت نام</p>
                   </Link>
                 </button>
+                <p>نام كاربر</p>
                 <form action="submit" className={styled.Form}>
                   <input type="text" placeholder="جستجو" />
                   <button className={styled.button}>
@@ -97,8 +97,14 @@ export default function NavBar(props: NavBarProps) {
                   <li>
                     <Link to="/shopping">محصولات</Link>
                   </li>
-                  <li>
+                  <li className={styled.Amozeshi}>
                     <Link to="/learning">دوره های آموزشی </Link>
+                    <div className={styled.subMenuTest}>
+                      <Link to="/learning">AVR آموزش</Link>
+                      <Link to="">Knx آموزش</Link>
+                      <Link to="">آموزش مباني شبكه</Link>
+                      <Link to="">آموزش پروتکل های ارتباطی</Link>
+                    </div>
                   </li>
                   <li>
                     <Link to="/article">مقالات</Link>
@@ -110,6 +116,16 @@ export default function NavBar(props: NavBarProps) {
                   <li>
                     <Link to="/contactUs">تماس با ما</Link>
                   </li>
+                  {/* <div className={styled.DropDown}>
+                    <div>
+                      <button>test</button>
+                      <div className={styled.DropDownOptions}>
+                        <Link to="">test1</Link>
+                        <Link to="">test1</Link>
+                        <Link to="">test1</Link>
+                      </div>
+                    </div>
+                  </div> */}
                 </ul>
               </li>
             </div>

@@ -8,12 +8,17 @@ import Footer from "../component/Footer";
 
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { setConstantValue } from "typescript";
+
 export default function Login() {
+  const [email, setEmail] = useState("");
   useEffect(() => {
-    axios.get("http://localhost:7100/info").then((res) => {
-      console.log(res);
+    axios.get("http://localhost:7100/info").then((res: any) => {
+      // const data = res.json();
+      // setEmail(data);
+      // console.log(email);
     });
   }, []);
   return (
@@ -40,7 +45,7 @@ export default function Login() {
                   placeholder="رمز عبور"
                 />
                 <p>Forget password</p>
-                <button>ورود</button>~
+                <button>ورود</button>
               </form>
 
               <div className={styled.SocialMedia}>
