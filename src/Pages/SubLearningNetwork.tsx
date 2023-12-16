@@ -6,7 +6,7 @@ import styled from "./Learning.module.css";
 import LogoBanner from "../component/LogoBanner";
 import { FaCartPlus } from "react-icons/fa";
 
-export default function SubLearning() {
+export default function SubLearningNetwork() {
   return (
     <>
       <NavBar />

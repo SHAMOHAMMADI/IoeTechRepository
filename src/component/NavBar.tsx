@@ -64,7 +64,7 @@ export default function NavBar(props: NavBarProps) {
                     <p> ثبت نام</p>
                   </Link>
                 </button>
-                <p>نام كاربر</p>
+                {/* <p>نام كاربر</p> */}
                 <form action="submit" className={styled.Form}>
                   <input type="text" placeholder="جستجو" />
                   <button className={styled.button}>
@@ -100,10 +100,10 @@ export default function NavBar(props: NavBarProps) {
                   <li className={styled.Amozeshi}>
                     <Link to="/learning">دوره های آموزشی </Link>
                     <div className={styled.subMenuTest}>
-                      <Link to="/learning">AVR آموزش</Link>
-                      <Link to="">Knx آموزش</Link>
-                      <Link to="">آموزش مباني شبكه</Link>
-                      <Link to="">آموزش پروتکل های ارتباطی</Link>
+                      <Link to="/sublearning">AVR آموزش</Link>
+                      <Link to="/sublearningknx">Knx آموزش</Link>
+                      <Link to="/sublearningnetwork">آموزش مباني شبكه</Link>
+                      <Link to="/sublearningraspberrypi">آموزش رزبری پای</Link>
                     </div>
                   </li>
                   <li>

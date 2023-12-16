@@ -6,25 +6,33 @@ import styled from "./Learning.module.css";
 import LogoBanner from "../component/LogoBanner";
 import { FaCartPlus } from "react-icons/fa";
 
-export default function SubLearning() {
+export default function SubLearningKnx() {
   return (
     <>
       <NavBar />
       <div className={styled.Learning}>
         <div className="bg-blue-300 text-right w-full border-2 flex justify-end ">
           <div className="bg-gray-600 border-2 w-5/12 p-4 h-96 mt-16 absolute left-8 mx-auto overflow-visible ">
-            <video
-              autoPlay
+            <iframe
+              // autoPlay
               className="w-full"
               src="https://freebies.faradars.org/video/fvee9310/720/fvee9310-00_intro.mp4"
-            ></video>
+            ></iframe>
+            {/* <iframe
+              src="https://www.aparat.com/video/video/embed/videohash/N6wZr/vt/frame"
+              // allowFullScreen="true"
+              // webkitallowfullscreen="true"
+              // mozallowfullscreen="true"
+              height="400"
+              width="600"
+            ></iframe> */}
             <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
               سفارش دوره
             </button>
           </div>
           <div className="leading-8 h-96 p-6 w-6/12">
             <div>ارائه دهنده: آیوتگ</div>
-            <div>AVR آموزش مقدماتی</div>
+            <div>دوره غیرحضوری (آنلاین) آموزش پیشرفته KNX</div>
             <div> 95% (27,788 رای) سطح: مقدماتی</div>
             <div>
               زمان مورد نیاز برای گذارندن دوره: 57 ساعت مجموع محتوای آموزشی: 5
@@ -68,37 +76,31 @@ export default function SubLearning() {
           <FaCartPlus />
         </button>
         <div className="w-11/12 py-6 px-6 mx-auto text-right space-y-6 leading-8 rounded h-fit flex flex-col justify-center my-8 bg-blue-50 shadow-xl rounded">
-          <h4>سرفصل‌های دوره آموزش میکروکنترلر ای وی آر و کدویژن – مقدماتی</h4>
+          <h4>سرفصل مطالب</h4>
           <p className="flex flex-col">
-            <p className="text-center ">آشنایی اولیه با میکروکنترلرهای AVR</p>
+            <p className="text-center"></p>
             <ul className="px-6">
-              <p>میکروکنترلرهای این خانواده</p>
-              <p>مفهوم فیوز بیت (Fuse bits) و بیت قفل</p>
-              <p>منابع کلاک سیستم</p>
-              <p>منابع Reset سیستم</p>
+              <p>
+                طراحی پیشرفته در پروژه ها و کاربرد سنسورهای خاص مانند ایستگاه
+                هواشناسی شامل برنامه نویسی تحت ETS
+              </p>
+              <p>فلگها شامل برنامه نویسی تحت ETS تعامل کاری ذر KNX</p>
+              <p>تلگرام KNX</p>
+              <p>کوپلرها و راه اندازی آنها شامل برنامه نویسی تحت ETS</p>
 
-              <b>ساختار حافظه</b>
-              <p>حافظه برنامه (Flash)</p>
-              <p>حافظه داده (RAM)</p>
-              <p>حافظه EEPROM</p>
+              <p>اپلیکیشن های خاص در KNX</p>
+              <p>ارتباط امن در KNX شامل برنامه نویسی تحت ETS</p>
+              <p>ارتباط تحت IP در KNX شامل برنامه نویسی ETS</p>
+              <p>
+                شبکه DALI و کنترا روشنایی در آن همراه با ارتباط با KNX شامل
+                برنامه نویسی تحت ETS
+              </p>
 
-              <b>ساختار پورت ها</b>
-              <p>مفهوم پورت، ورودی و خروجی</p>
-              <p>معرفی رجیسترهای مربوط به پورت ها</p>
-
-              <b>کار با نرم افزار CodevisionAVR</b>
-              <p>آشنایی اولیه با محیط نرم افزار</p>
-              <p>ساخت پروژه، نوشتن برنامه و کامپایل کردن آن</p>
-              <p>برنامه ریزی IC میکروکنترلر</p>
-
-              <b>
-                انجام چند پروژه نمونه و شبیه سازی در نرم افزار پروتئوس (Proteus)
-              </b>
-              <p>کار با پورت ها (کلید فشاری، LED و سون سگمنت)</p>
-              <p>اتصال صفحه کلید ماتریسی</p>
-              <p>اتصال LCD کاراکتری</p>
-              <p>پروژه قفل رمزی دیجیتال</p>
-              <p>پروژه راه اندازی استپر موتور (Stepper motor)</p>
+              <p>تعریف لایه های منطق در پروژه شامل برنامه نویسی تحت ETS</p>
+              <p>سیستم امنیتی و دزگیر شامل برنامه نویسی تحت ETS</p>
+              <p>
+                مانیتورینگ ، کنترل از موبایل و HMI شامل برنامه نویسی تحت ETSا
+              </p>
             </ul>
           </p>
         </div>

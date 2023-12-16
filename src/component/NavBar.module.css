@@ -36,7 +36,7 @@ animation: AnimationName 3s ease infinite;
 
 /*  */
 .ad {
-  background-image: url("../../../iotech/public/images/BannerTop4.png");
+  background-image: url("../../public/images/BannerTopNew.png");
   background-position: center;
   background-size: cover;
   height: 4.5em;
@@ -332,6 +332,9 @@ animation: AnimationName 3s ease infinite;
     align-items: center;
     /* border: 1px solid; */
     margin: 0.1em 0;
+  }
+  .ad {
+    display: none;
   }
 
   .menuGredient {
