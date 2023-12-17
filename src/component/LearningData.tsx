@@ -7,106 +7,44 @@ export type LearningProps = {
   teacher?: string;
   oldPrice?: number;
   price?: number;
-  discount?:number;
+  discount?: number;
 };
 
 export const LearningData: LearningProps[] = [
   {
-    image: "./images/45.jpg",
+    image: "./images/knx1.jpg",
     title: " knx دوره هموشمند سازی ",
     logo: "./images/logoiotech.png",
     teacher: "جناب مهندس احمدی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
+    oldPrice: 50000000,
+    price: 45000000,
+    discount: 10,
   },
   {
-    image: "./images/45.jpg",
+    image: "./images/avr2.jpg",
     title: " Avr دوره برنامه نویسی میکروکنترلر ",
     logo: "./images/logoiotech.png",
     teacher: "جناب مهندس رضایی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
+    oldPrice: 2000000,
+    price: 1600000,
+    discount: 10,
   },
   {
-    image: "./images/45.jpg",
-    title: " knx دوره هموشمند سازی ",
+    image: "./images/network+1.png",
+    title: " دوره شبکه",
     logo: "./images/logoiotech.png",
     teacher: "جناب مهندس احمدی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
+    oldPrice: 1000000,
+    price: 900000,
+    discount: 10,
   },
   {
-    image: "./images/45.jpg",
-    title: " Avr دوره برنامه نویسی میکروکنترلر ",
+    image: "./images/pi5.png",
+    title: "دوره رزبری پای",
     logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس رضایی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
-  },
-  {
-    image: "./images/45.jpg",
-    title: " knx دوره هموشمند سازی ",
-    logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس احمدی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
-  },
-  {
-    image: "./images/45.jpg",
-    title: " Avr دوره برنامه نویسی میکروکنترلر ",
-    logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس رضایی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
-  },
-  {
-    image: "./images/45.jpg",
-    title: " knx دوره هموشمند سازی ",
-    logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس احمدی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
-  },
-  {
-    image: "./images/45.jpg",
-    title: " Avr دوره برنامه نویسی میکروکنترلر ",
-    logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس رضایی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
-  },
-  {
-    image: "./images/45.jpg",
-    title: " knx دوره هموشمند سازی ",
-    logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس احمدی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
-  },
-  {
-    image: "./images/45.jpg",
-    title: " Avr دوره برنامه نویسی میکروکنترلر ",
-    logo: "./images/logoiotech.png",
-    teacher: "جناب مهندس رضایی",
-    oldPrice: 189000,
-    price: 130000,
-    discount :10,
-
+    teacher: "خانم مهندس محمدی",
+    oldPrice: 2000000,
+    price: 1600000,
+    discount: 10,
   },
 ];

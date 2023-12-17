@@ -11,12 +11,19 @@ export default function SubLearningKnx() {
     <>
       <NavBar />
       <div className={styled.Learning}>
-        <div className="bg-blue-300 text-right w-full border-2 flex justify-end ">
-          <div className="bg-gray-600 border-2 w-5/12 p-4 h-96 mt-16 absolute left-8 mx-auto overflow-visible ">
-            <iframe
-              // autoPlay
-              className="w-full"
+        <div className="bg-blue-300 text-right w-full border-2 flex justify-end h-fit">
+          <div className="bg-gray-600 border-2 w-5/12 p-4 h-fit mt-16 absolute left-8 mx-auto overflow-visible xl:h-72">
+            {/* <iframe
+              className="w-full h-48"
               src="https://freebies.faradars.org/video/fvee9310/720/fvee9310-00_intro.mp4"
+            ></iframe> */}
+
+            <iframe
+              src="https://www.aparat.com/video/video/embed/videohash/wEDtA/vt/frame?titleShow=true&autoplay=true&recom=self"
+              allow="play"
+              className="w-full h-48"
+              // webkitallowfullscreen="true"
+              // mozallowfullscreen="true"
             ></iframe>
             {/* <iframe
               src="https://www.aparat.com/video/video/embed/videohash/N6wZr/vt/frame"
@@ -30,7 +37,7 @@ export default function SubLearningKnx() {
               سفارش دوره
             </button>
           </div>
-          <div className="leading-8 h-96 p-6 w-6/12">
+          <div className="leading-8 h-fit p-6 w-6/12 ">
             <div>ارائه دهنده: آیوتگ</div>
             <div>دوره غیرحضوری (آنلاین) آموزش پیشرفته KNX</div>
             <div> 95% (27,788 رای) سطح: مقدماتی</div>
@@ -42,7 +49,7 @@ export default function SubLearningKnx() {
               حد نصاب قبولی در دوره: 70 نمره فارغ‌التحصیل شدن در این دوره نیاز
               به ارسال تمرین‌ها و پروژه‌های الزامی دارد
             </div>
-            <div> گواهینامه این دوره توسط مکتب‌خونه ارائه می‌شود</div>
+            <div> گواهینامه این دوره توسط آیوتگ ارائه می‌شود</div>
           </div>
         </div>
         <div className="p-6 text-right flex justify-evenly my-10">
