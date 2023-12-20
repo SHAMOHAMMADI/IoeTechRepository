@@ -9,23 +9,22 @@ import { Link } from "react-router-dom";
 
 export default function ProductsCart(props: ProductsCartProps) {
   const [data, setData] = useState(ProductartsData);
-
   const [cart, setCart] = useState({});
 
-  const BasketClick = () => {
-   
-  };
+  const BasketClick = () => {};
   return (
     <div className={styled.Carts}>
       <div className={styled.Products}>
         {data.map((res) => (
           <div className={styled.pro}>
-            <div className={styled.img}>
-              <img className={styled.pic} src={res.image} alt="" />
+            <Link to={`/subproducts/${res.id}`}>
+              <div className={styled.img}>
+                <img className={styled.pic} src={res.image} alt="" />
 
-              <img className={styled.dis} src={res.discount} alt="" />
-              <p className={styled.dis}>{res.discountAmount}%</p>
-            </div>
+                <img className={styled.dis} src={res.discount} alt="" />
+                <p className={styled.dis}>{res.discountAmount}%</p>
+              </div>
+            </Link>
             <div className={styled.TextProducts}>
               <p>{res.title}</p>
               <s style={{ color: "grey" }}>{res.oldPrice} </s>

@@ -28,7 +28,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 0.6em;
   border-radius: 5px;
-  width: 30%;
+  /* width: 30%; */
   /* border:1px solid black; */
   margin: 1em auto;
 }
@@ -54,16 +54,20 @@
 
 /* media query for responsive */
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   .Articles {
     width: 100%;
     text-align: right;
     text-align-last: justify;
+    /* border: 1px solid red; */
+  }
+  .Art {
+    /* border: 1px solid red; */
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .Articles {
-    width: 70%;
+    width: 40%;
     margin: 0.5em auto;
 
     text-align: right;
@@ -74,9 +78,9 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .Articles {
-    width: 90%;
+    width: 40%;
     margin: 0.5em auto;
 
     text-align: right;

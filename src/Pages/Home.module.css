@@ -177,6 +177,7 @@ div.Sidebar2 > * {
   .Sidebar2 {
     display: none;
   }
+
 }
 @media screen and (max-width: 768px) {
   .LearningBanner {
