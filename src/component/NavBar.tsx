@@ -13,7 +13,8 @@ import { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "./Context/UserContextProvider";
 import { LoginContext } from "./Context/LoginUserContext";
-
+import { useEffect } from "react";
+import axios from "axios";
 export interface NavBarProps {
   onClick?: () => void;
   isInitiallyOpen?: boolean;
@@ -21,6 +22,8 @@ export interface NavBarProps {
 
 export default function NavBar(props: NavBarProps) {
   const { onClick, isInitiallyOpen } = props;
+
+  const [data, setData] = useState();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -31,8 +34,6 @@ export default function NavBar(props: NavBarProps) {
 
   const userContext = useContext(UserContext);
   const LoginUserContext = useContext(LoginContext);
-
-  console.log(userContext.user);
   return (
     <div className={styled.AllNavBar}>
       <div className={styled.ad}></div>

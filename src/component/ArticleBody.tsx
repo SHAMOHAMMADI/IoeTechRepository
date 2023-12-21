@@ -10,7 +10,6 @@ export default function ArticleBody(props : ArticleCartsProps ) {
     const[data ,setData]=useState()
   return (
     <div>
-
         <NavBar/>
         <div className={styled.ArticleBody}>
         <h3 className={styled.ArticleBodyh3}>همه چیز درباره پارکینگ هوشمند: انقلابی در نحوه پارک کردن ما!</h3>
@@ -57,8 +56,8 @@ export default function ArticleBody(props : ArticleCartsProps ) {
 ?</p>
     <p>شرکت آیوتگ</p>
     <p>تاریخ انتشار :</p>
-    <Footer/>
         </div>
+    <Footer/>
     </div>
   )
 }

@@ -1,16 +1,24 @@
-.ArticleBodyp , .ArticleBodyh3{
-    text-align: right;
-    text-align-last: justify;
+.ArticleBodyp,
+.ArticleBodyh3 {
+  text-align: right;
 }
-.ArticleBody{
-    border:1px solid;
-    margin:0.3em;
-    padding:0.5em;
-
-
+.ArticleBody {
+  border: 1px solid;
+  margin: 0.3em;
+  padding: 3em;
+  justify-content: center;
+  width: 100vw;
+  text-justify: center;
+  text-justify: right;
+  text-align: center;
+  text-align: justify;
+  line-height: 2em;
+}
+.ArticleBody > * {
+  padding-bottom: 24px;
 }
 
-.ArticleBodyp{
-    text-align: justify;
-    text-align: end;
+.ArticleBodyp {
+  text-align: justify;
+  text-align: end;
 }

@@ -18,7 +18,6 @@ export default function Login() {
     axios.get("http://localhost:7100/info").then((res: any) => {
       // const data = res.json();
       // setEmail(data);
-      // console.log(email);
     });
   }, []);
   return (
@@ -36,13 +35,20 @@ export default function Login() {
             <div>
               <form action="submit" className={styled.FormLogin}>
                 <label htmlFor="email"></label>
-                <input type="email" name="" id="email" placeholder="ایمیل" />
+                <input
+                  type="email"
+                  required
+                  name=""
+                  id="email"
+                  placeholder="ایمیل"
+                />
                 <label htmlFor="password"></label>
                 <input
                   type="password"
                   name=""
                   id="password"
                   placeholder="رمز عبور"
+                  required
                 />
                 <p>Forget password</p>
                 <button>ورود</button>

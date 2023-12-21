@@ -37,13 +37,11 @@ export default function Login() {
     email: "",
     password: "",
   });
-
   const [name, setName] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState<number | string>("");
   const [user, setUser] = useState<User | null>(null);
-
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
@@ -72,7 +70,7 @@ export default function Login() {
       email: email,
     });
 
-    Navigate("/shopping");
+    Navigate("/profile");
     // setUser({
     //   name: name,
     //   lName: lname,
@@ -81,9 +79,7 @@ export default function Login() {
     // });
 
     LoginUseContext.setIsLogin(true);
-    userContext.setUser(() => {
-      
-    });
+    userContext.setUser(() => {});
   };
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
 
@@ -107,6 +103,7 @@ export default function Login() {
                 <input
                   type="text"
                   name="name"
+                  required
                   onChange={onNameChange}
                   id="firstName"
                   placeholder="نام"
@@ -117,6 +114,7 @@ export default function Login() {
                   type="text"
                   onChange={onLnameChange}
                   name="lName"
+                  required
                   id="lastName"
                   placeholder=" نام خانوادگی"
                 />
@@ -125,6 +123,7 @@ export default function Login() {
                 <input
                   type="password"
                   onChange={onPasswordChange}
+                  required
                   name="password"
                   id="password"
                   placeholder="پسورد"
@@ -134,6 +133,7 @@ export default function Login() {
                 <input
                   onChange={onEmailChange}
                   type="email"
+                  required
                   name="email"
                   id="email"
                   placeholder="ایمیل"
