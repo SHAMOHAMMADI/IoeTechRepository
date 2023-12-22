@@ -24,6 +24,7 @@ import { UserContextProvider } from "../src/component/Context/UserContextProvide
 import { LoginUserContextProvider } from "../src/component/Context/LoginUserContext";
 import SubProducts from "./Pages/SubProducts";
 import Profile from "./Pages/Profile";
+import SubArticle from "./Pages/SubArticle";
 
 export type myProps = [isLogin?: true, setIsLogin?: () => void];
 // export  const AppContext = createContext<myProps>({
@@ -51,7 +52,7 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/Test4" element={<Test4 />} />
-            <Route path="/Article1" element={<ArticleBody />} />
+            <Route path="/subarticle/:id" element={<SubArticle />} />
             <Route path="/SubLearning" element={<SubLearning />} />
             <Route path="/SubLearningknx" element={<SubLearningKnx />} />
             <Route path="/subproducts/:id" element={<SubProducts />} />

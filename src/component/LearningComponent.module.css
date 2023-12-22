@@ -1,12 +1,10 @@
 .carts {
   display: flex;
-  margin: 0.5em;
-
+  /* margin: 0.5em; */
   width: 100%;
-  height: 100vh;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  /* border:1px solid; */
+  /* height: fit-content; */
 }
 
 .cart {

@@ -1,25 +1,27 @@
 import React from "react";
 
 export type ArticleCartsProps = {
+  id?: number;
   image?: string;
   title?: string;
   description?: string;
   logo?: string;
   date?: string;
   // oldprice ?: number
-  Text ?: string;
+  Text?: string;
 };
 export const ArticleCartsData: ArticleCartsProps[] = [
   {
+    id: 1,
     image: "./images/parking.webp",
     title: "همه چیز درباره پارکینگ هوشمند: انقلابی در نحوه پارک کردن ما!",
     description: "",
     logo: "./images/logoiotech.png",
     date: " دنیای هوشمند اویو  ۱۸ مهر ۱۴۰۲",
-    Text:""
-    
+    Text: "",
   },
   {
+    id: 2,
     image: "./images/villa.webp",
     title: "۹ سیستمی که یک ویلای هوشمند لوکس به شما تحویل می دهند",
     description: "",
@@ -34,6 +36,7 @@ export const ArticleCartsData: ArticleCartsProps[] = [
   //   date: "",
   // },
   {
+    id: 3,
     image: "./images/smart home for kids.webp",
     title: "۱۲ مورد از مزایای هوشمند سازی خانه برای کودکان",
     description: "",
@@ -41,6 +44,7 @@ export const ArticleCartsData: ArticleCartsProps[] = [
     date: "",
   },
   {
+    id: 4,
     image: "./images/coolwarm system.webp",
     title: "سیستم گرمایشی هوشمند چیست؟ موتورخانه هوشمند چگونه کار می کند؟",
     description: "",
@@ -48,6 +52,8 @@ export const ArticleCartsData: ArticleCartsProps[] = [
     date: "",
   },
   {
+    id: 5,
+
     image: "./images/security.webp",
     title:
       "امنیت خانه هوشمند چگونه تامین می‌شود؟ راهکارهای افزایش امنیت و محافظت از اطلاعات",
@@ -56,6 +62,8 @@ export const ArticleCartsData: ArticleCartsProps[] = [
     date: "",
   },
   {
+    id: 6,
+
     image: "./images/roof garden.webp",
     title: "هوشمندسازی روف گاردن: بررسی مزایا و مهم ترین استراتژی ها",
     description: "",
@@ -63,6 +71,8 @@ export const ArticleCartsData: ArticleCartsProps[] = [
     date: "",
   },
   {
+    id: 7,
+
     image: "./images/oldman.webp",
     title: "۷ سناریو خانه هوشمند برای سالمندان و افراد مسن",
     description: "",
@@ -70,6 +80,8 @@ export const ArticleCartsData: ArticleCartsProps[] = [
     date: "",
   },
   {
+    id: 8,
+
     image: "./images/serverofserver.webp",
     title:
       "هوشمندسازی اتاق سرور چطور به افزایش بهره وری و امنیت آن کمک می کند؟",
@@ -85,6 +97,8 @@ export const ArticleCartsData: ArticleCartsProps[] = [
   //   date: "",
   // },
   {
+    id: 9,
+
     image: "./images/smart agriculture.webp",
     title:
       "کشاورزی هوشمند چیست و چطور به بهبود عملکرد و کیفیت محصولات کمک می کند؟",
@@ -121,6 +135,7 @@ export const ArticleCartsData: ArticleCartsProps[] = [
   //   date: "",
   // },
   {
+    id: 10,
     image: "./images/agriculture.png",
     title: "هرچیزی که باید درباره سیستم آبیاری هوشمند بدانید",
     description: "",

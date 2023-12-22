@@ -34,13 +34,16 @@ const SubProducts = () => {
     <>
       <NavBar />
       <LogoBanner />
-      <div className="w-full h-full flex flex-col justify-center items-center border-2 ">
-        <div className="flex flex-row-reverse m-16 rounded-full w-full justify-evenly items-center [&>*]:border-2 text-center sm:flex flex-wrap my-4 space-y-4">
-          <div className=" rounded-md shadow-md w-3/12 square-aspect flex justify-center items-center max-sm:w-9/12">
+      <div className="w-full h-full flex flex-col justify-center items-center">
+        <div
+          className="flex flex-row-reverse m-16 border-2 w-full justify-evenly py-6 [&>*]:border-2 text-center 
+         sm:flex flex-wrap my-4 space-y-4"
+        >
+          <div className="rounded-md shadow-md w-3/12 square-aspect flex justify-center items-center max-sm:w-9/12 ">
             <img src={data.image} className="h-aspect-square w-full" alt="" />
           </div>
 
-          <div className=" rounded-md shadow-md w-3/12 h-fit p-16 text-right sleading-8 justify-center aspect-square space-y-6 text-sm max-sm:w-9/12">
+          <div className="rounded-md shadow-md w-12/12 h-fit p-8 text-right justify-center leading-8 aspect-square space-y-2 text-sm xl:w-6/12 lg:w-6/12 sm:w-12/12 ">
             <h2>{data.title}</h2>
             <p>{data.someDescription}</p>
             <p></p>
