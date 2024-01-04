@@ -154,9 +154,6 @@ animation: AnimationName 3s ease infinite;
   padding: 0.5em;
 }
 
-.DropDownOptions:hover {
-}
-
 .basket {
   display: flex;
   /* border: 1px solid black; */
@@ -258,8 +255,6 @@ animation: AnimationName 3s ease infinite;
 .ButtonStyle2 p {
   width: 4em;
 }
-.ButtonStyle2 > * {
-}
 
 .MenuBar ul {
   display: flex;
@@ -302,9 +297,6 @@ animation: AnimationName 3s ease infinite;
   display: none;
 }
 
-.menuGredient li {
-}
-
 .MenuBar {
   width: 100%;
   /* border: 1px solid red; */
@@ -338,14 +330,6 @@ animation: AnimationName 3s ease infinite;
     display: none;
   }
 
-  .menuGredient {
-    /* border: 1px solid; */
-    /* position: absolute; */
-    /* left: 300px; */
-
-    /* width: 2em; */
-  }
-
   .Form {
     display: flex;
     flex-direction: column;
@@ -362,9 +346,7 @@ animation: AnimationName 3s ease infinite;
     padding: 0;
     margin: 0;
   }
-  .ad {
-    /* display:none; */
-  }
+
   .MenuBar ul {
     display: flex;
     flex-direction: column;
@@ -396,12 +378,6 @@ animation: AnimationName 3s ease infinite;
   .Form input {
     width: 100%;
     margin: 0;
-  }
-  .button {
-  }
-  .imageSearch {
-    /* border: 1px solid black; */
-    /* width:100%; */
   }
 
   .Menu {
@@ -460,27 +436,12 @@ animation: AnimationName 3s ease infinite;
     width: 80%;
   }
 
-  .MenuIcon > * {
-    /* border: 1px solid; */
-    /* width: 4em; */
-    /* height: 3em; */
-  }
-
   .MenuWrapper {
     display: none;
-  }
-  .menuAll {
-    /* border: 1px solid; */
   }
 
   .menuBar .header {
     margin: 0;
-  }
-
-  .header .NavBar769 {
-    /* display: flex; */
-    /* border: 1px solid; */
-    /* flex-direction: column; */
   }
 }
 
@@ -504,9 +465,7 @@ animation: AnimationName 3s ease infinite;
     flex-direction: column;
     /* border: 1px solid black; */
   }
-  .ad {
-    /* display:none; */
-  }
+
   .MenuBar ul {
     display: flex;
     flex-direction: column;
@@ -535,10 +494,6 @@ animation: AnimationName 3s ease infinite;
   }
   .Form input {
     width: 70%;
-  }
-  .button {
-  }
-  .imageSearch {
   }
 
   .Menu {
@@ -618,10 +573,6 @@ animation: AnimationName 3s ease infinite;
   .MenuWrapper {
     display: none;
   }
-
-  .MenuBar ul li {
-  }
-
   .MenuIconWrapper .MenuIcon a > * {
     height: 3em;
     width: 3em;
@@ -673,13 +624,6 @@ animation: AnimationName 3s ease infinite;
 
   .MenuWrapper {
     display: none;
-  }
-  .menuAll {
-    /* border:1px solid; */
-  }
-
-  .MenuBar {
-    /* border:1px solid; */
   }
 }
 

@@ -18,7 +18,7 @@ const Profile = () => {
     <div>
       <NavBar />
       <ProfileComponent />
-      <p className="flex justify-center items-center">test</p>
+      <p className="flex justify-center items-center"></p>
       <p>{}</p>
       <Footer />
     </div>

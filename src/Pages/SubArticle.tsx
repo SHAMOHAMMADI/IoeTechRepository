@@ -34,11 +34,11 @@ const SubProducts = () => {
     <>
       <NavBar />
       <LogoBanner />
-      <div className="flex flex-col justify-evenly space-y-4 w-12/12 sm:w-12/12">
+      <div className="flex flex-col justify-evenly space-y-4 w-11/12 sm:w-12/12">
         <div className="flex flex-col justify-center w-full items-center shadow-md p-10 m-6 rounded space-y-4">
           <h2 className="text-red-600 font-bold text-left">{data.title}</h2>
           <p className="">{data.someDescription}</p>
-          <p className="text-center leading-8">{data.description}</p>
+          <p className="text-justify leading-8">{data.description}</p>
         </div>
         <p>{}</p>
       </div>

@@ -224,7 +224,7 @@ const Footer = () => {
           </div>
           <div className={styled.Nemad}>
             <p>نمادها و مجوزها</p>
-            <img src={enamad} alt="enamad" />
+            {/* <img src={enamad} alt="enamad" /> */}
           </div>
         </div>
         <div className={styled.CopyRight}>

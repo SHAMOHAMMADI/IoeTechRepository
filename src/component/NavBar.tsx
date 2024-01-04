@@ -32,6 +32,10 @@ export default function NavBar(props: NavBarProps) {
     // onClick && onClick();
   };
 
+  useEffect(() => {
+    document.title = "327578";
+  }, []);
+
   const userContext = useContext(UserContext);
   const LoginUserContext = useContext(LoginContext);
   return (
