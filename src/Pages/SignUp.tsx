@@ -50,12 +50,12 @@ export default function Login() {
     setLname(e.target.value);
   };
 
-  const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
   const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+  };
+
+  const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
   };
 
   const Navigate = useNavigate();
@@ -119,16 +119,6 @@ export default function Login() {
                   placeholder=" نام خانوادگی"
                 />
 
-                <label htmlFor="email"></label>
-                <input
-                  type="password"
-                  onChange={onPasswordChange}
-                  required
-                  name="password"
-                  id="password"
-                  placeholder="پسورد"
-                />
-
                 <label htmlFor="password"></label>
                 <input
                   onChange={onEmailChange}
@@ -137,6 +127,16 @@ export default function Login() {
                   name="email"
                   id="email"
                   placeholder="ایمیل"
+                />
+
+                <label htmlFor="email"></label>
+                <input
+                  type="password"
+                  onChange={onPasswordChange}
+                  required
+                  name="password"
+                  id="password"
+                  placeholder="پسورد"
                 />
 
                 <p>Forget password</p>

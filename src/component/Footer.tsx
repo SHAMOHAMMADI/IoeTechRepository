@@ -4,7 +4,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { MdPhoneEnabled } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import enamad from "../logo.png";
+// import enamad from "../logo.png";
 import { FaTelegram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styled.FooterInfo}>
-          <div className={styled.FooterInfo1}>
+          {/* <div className={styled.FooterInfo1}>
             <p>مقالات آموزشی</p>
             <div>
               <div className={styled.Text1}>
@@ -85,28 +85,36 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className={styled.FooterInfo2}>
             <p>دسترسی سریع</p>
             <div>
               <div className={styled.Text2}>
-                <p>
-                  <MdKeyboardArrowLeft />
-                  محصولات
-                </p>
-                <p>
-                  <MdKeyboardArrowLeft />
-                  دوره آموزشی
-                </p>
-                <p>
-                  <MdKeyboardArrowLeft />
-                  مقالات
-                </p>
-                <p>
-                  <MdKeyboardArrowLeft />
-                  درباره ما
-                </p>
+                <Link to="/shopping">
+                  <p>
+                    <MdKeyboardArrowLeft />
+                    محصولات
+                  </p>
+                </Link>
+                <Link to="/learning">
+                  <p>
+                    <MdKeyboardArrowLeft />
+                    دوره آموزشی
+                  </p>
+                </Link>
+                <Link to="/article">
+                  <p>
+                    <MdKeyboardArrowLeft />
+                    مقالات
+                  </p>
+                </Link>
+                <Link to="/aboutus">
+                  <p>
+                    <MdKeyboardArrowLeft />
+                    درباره ما
+                  </p>
+                </Link>
               </div>
             </div>
           </div>
@@ -225,6 +233,19 @@ const Footer = () => {
           <div className={styled.Nemad}>
             <p>نمادها و مجوزها</p>
             {/* <img src={enamad} alt="enamad" /> */}
+            <a
+              referrerPolicy="origin"
+              target="_blank"
+              href="https://trustseal.enamad.ir/?id=443862&Code=U9R68vra6NaCnjvh2XewSB6WZ6zZEXSC"
+            >
+              <img
+                referrerPolicy="origin"
+                src="https://trustseal.enamad.ir/logo.aspx?id=443862&Code=U9R68vra6NaCnjvh2XewSB6WZ6zZEXSC"
+                className="w-16 h-16"
+                alt=""
+                style={{ cursor: "pointer" }}
+              />
+            </a>
           </div>
         </div>
         <div className={styled.CopyRight}>

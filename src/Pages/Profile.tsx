@@ -12,14 +12,12 @@ const Profile = () => {
     axios.get("http://localhost:7100/info").then((res) => {});
   }, []);
 
-  const { user, setUser , valid , setValid} = useContext(UserContext);
+  const { user, setUser, valid, setValid } = useContext(UserContext);
   console.table(user);
   return (
     <div>
       <NavBar />
       <ProfileComponent />
-      <p className="flex justify-center items-center"></p>
-      <p>{}</p>
       <Footer />
     </div>
   );

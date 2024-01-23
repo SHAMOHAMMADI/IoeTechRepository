@@ -6,16 +6,21 @@ import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { IoHeartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { createContext } from "react";
 
 export default function ProductsCart(props: ProductsCartProps) {
   const [data, setData] = useState(ProductartsData);
   const [cart, setCart] = useState({});
 
-  const BasketClick = () => {};
+  const AppContext = createContext(null);
+  const BasketClick = (cart: any) => {
+    setCart(cart + 1);
+  };
   return (
     <div className={styled.Carts}>
       <div className={styled.Products}>
         {data.map((res) => (
+        
           <div className={styled.pro}>
             <Link to={`/subproducts/${res.id}`}>
               <div className={styled.img}>

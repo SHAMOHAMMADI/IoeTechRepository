@@ -15,6 +15,7 @@ import { UserContext } from "./Context/UserContextProvider";
 import { LoginContext } from "./Context/LoginUserContext";
 import { useEffect } from "react";
 import axios from "axios";
+
 export interface NavBarProps {
   onClick?: () => void;
   isInitiallyOpen?: boolean;
@@ -51,9 +52,12 @@ export default function NavBar(props: NavBarProps) {
             </div>
             <div className={styled.Menu}>
               <div className={styled.basket}>
-                <button>
-                  <RiShoppingCartLine />
-                </button>
+                <Link to="/profile">
+                  <button>
+                    <div className="bg-[#ff0000] w-4 h-4 absolute top-[-5px] left-[-5px] rounded"></div>
+                    <RiShoppingCartLine />
+                  </button>
+                </Link>
                 <button
                   onClick={() => {
                     LoginUserContext.setIsLogin(false);
@@ -72,11 +76,11 @@ export default function NavBar(props: NavBarProps) {
                 {/* <p>نام كاربر</p> */}
                 <form action="submit" className={styled.Form}>
                   <input type="text" placeholder="جستجو" />
-                  <button className={styled.button}>
-                    <Link to="/aboutus">
+                  <Link to="/UserFinds">
+                    <button className={styled.button}>
                       <IoIosSearch />
-                    </Link>
-                  </button>
+                    </button>
+                  </Link>
                 </form>
 
                 <div>{userContext?.user}</div>

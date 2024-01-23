@@ -25,55 +25,53 @@ import { LoginUserContextProvider } from "../src/component/Context/LoginUserCont
 import SubProducts from "./Pages/SubProducts";
 import Profile from "./Pages/Profile";
 import SubArticle from "./Pages/SubArticle";
+import UserFinds from "./Pages/UserFinds";
 
-export type myProps = [isLogin?: true, setIsLogin?: () => void];
+export type myProps = [isLogin?: boolean, setIsLogin?: () => void];
 // export  const AppContext = createContext<myProps>({
 //   isLogin : true,
-//   setIsLogin ?: ()=>void
+//   setIsLogin : ()=>void
 // });
 
 export const AppContext = createContext({} as myProps);
 
 function App() {
   const [isLogin, setIsLogin] = useState<boolean>(false);
+  const [cart, setCart] = useState<boolean>(false);
+
   return (
     <div className="App">
-      <UserContextProvider>
-        <LoginUserContextProvider>
-          {/* <AppContext.Provider value={{isLogin , setIsLogin}}> */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/article" element={<Article />} />
-            <Route path="/Learning" element={<Learning />} />
-            <Route path="/shopping" element={<ShoppingPage />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/Test4" element={<Test4 />} />
-            <Route path="/subarticle/:id" element={<SubArticle />} />
-            <Route path="/SubLearning" element={<SubLearning />} />
-            <Route path="/SubLearningknx" element={<SubLearningKnx />} />
-            <Route path="/subproducts/:id" element={<SubProducts />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route
-              path="/SubLearningraspberrypi"
-              element={<SubLearningRaspberrypi />}
-            />
+      {/* <UserContextProvider> */}
+      {/* <LoginUserContextProvider> */}
+      {/* <AppContext.Provider value={{ isLogin, setIsLogin }}> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/article" element={<Article />} />
+        <Route path="/Learning" element={<Learning />} />
+        <Route path="/shopping" element={<ShoppingPage />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Test4" element={<Test4 />} />
+        <Route path="/subarticle/:id" element={<SubArticle />} />
+        <Route path="/SubLearning" element={<SubLearning />} />
+        <Route path="/SubLearningknx" element={<SubLearningKnx />} />
+        <Route path="/subproducts/:id" element={<SubProducts />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/userfinds" element={<UserFinds />}></Route>
+        <Route
+          path="/SubLearningraspberrypi"
+          element={<SubLearningRaspberrypi />}
+        />
 
-            <Route
-              path="/SubLearningnetwork"
-              element={<SubLearningNetwork />}
-            />
-            <Route
-              path="/SubLearningprotocol"
-              element={<SubLearningProtocol />}
-            />
-          </Routes>
-          {/* </AppContext.Provider>~ */}
-        </LoginUserContextProvider>
-      </UserContextProvider>
+        <Route path="/SubLearningnetwork" element={<SubLearningNetwork />} />
+        <Route path="/SubLearningprotocol" element={<SubLearningProtocol />} />
+      </Routes>
+      {/* </AppContext.Provider> */}
+      {/* </LoginUserContextProvider> */}
+      {/* </UserContextProvider> */}
     </div>
   );
 }

@@ -16,6 +16,7 @@ import ProductsCart from "../component/ProductsCart";
 import LogoBanner from "../component/LogoBanner";
 import LearningComponent from "../component/LearningComponent";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import img1 from "../help.png";
 import img2 from "../delivery.png";
@@ -75,16 +76,18 @@ export default function Home({
       <div className={styled.rasberry}>
         <div className={styled.rasbannerText}>
           <img className={styled.rasLogo} src={rasLogo} alt="" />
-          <button className={styled.button}>خرید</button>
+          <button className={styled.button}>
+            <Link to="/shopping">خرید</Link>
+          </button>
         </div>
         <img src={ras} alt="" />
+      </div>
+      <div className={styled.ProductsBanner}>
+        <ProductsCart />
       </div>
       <div className={styled.Banner3}>
         <img src={banner3} alt="" />
         {/* <button>خرید</button> */}
-      </div>
-      <div className={styled.ProductsBanner}>
-        <ProductsCart />
       </div>
       <div className={styled.secondBanner}>
         <div>

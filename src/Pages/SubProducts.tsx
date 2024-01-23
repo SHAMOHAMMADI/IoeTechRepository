@@ -14,7 +14,7 @@ const SubProducts = () => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    axios.get(`http://localhost:3009/subproducts/${params.id}`).then((res) => {
+    axios.get(`http://localhost:7100/subproducts/${params.id}`).then((res) => {
       setData(res.data);
     });
     console.log(data);
