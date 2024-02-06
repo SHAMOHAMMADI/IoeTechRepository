@@ -10,6 +10,8 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { toBeRequired } from "@testing-library/jest-dom/matchers";
+import pic3 from "../enamad2.png";
 
 const Footer = () => {
   return (
@@ -233,19 +235,13 @@ const Footer = () => {
           <div className={styled.Nemad}>
             <p>نمادها و مجوزها</p>
             {/* <img src={enamad} alt="enamad" /> */}
-            <a
-              referrerPolicy="origin"
-              target="_blank"
-              href="https://trustseal.enamad.ir/?id=443862&Code=U9R68vra6NaCnjvh2XewSB6WZ6zZEXSC"
-            >
-              <img
-                referrerPolicy="origin"
-                src="https://trustseal.enamad.ir/logo.aspx?id=443862&Code=U9R68vra6NaCnjvh2XewSB6WZ6zZEXSC"
-                className="w-16 h-16"
-                alt=""
-                style={{ cursor: "pointer" }}
-              />
-            </a>
+
+            <img
+              src={pic3}
+              className="w-32 h-32"
+              alt=""
+              style={{ cursor: "pointer" }}
+            />
           </div>
         </div>
         <div className={styled.CopyRight}>

@@ -5,22 +5,27 @@ import LearningComponent from "../component/LearningComponent";
 import styled from "./Learning.module.css";
 import LogoBanner from "../component/LogoBanner";
 import { FaCartPlus } from "react-icons/fa";
+import { useShoppingCart } from "../component/Context/ShoppingCartContext";
+import { ProductsCartProps } from "../component/ProductCartData";
 
-export default function SubLearningRaspberrypi() {
+export default function SubLearningRaspberrypi(props: ProductsCartProps) {
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
+    useShoppingCart();
+
   return (
     <>
       <NavBar />
       <div className={styled.Learning}>
         <div className="bg-blue-300 text-right w-full border-2 flex justify-end ">
-          <div className="bg-gray-600 border-2 w-5/12 p-4 h-96 mt-16 absolute left-8 mx-auto overflow-visible ">
+          <div className="bg-gray-600 border-2 w-5/12 p-4 h-fit mt-16 absolute left-8 mx-auto overflow-visible ">
             <video
               autoPlay
-              className="w-full"
+              className="w-11/12 h-80 mx-auto"
               src="https://freebies.faradars.org/video/fvee9310/720/fvee9310-00_intro.mp4"
             ></video>
-            <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
+            {/* <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
               سفارش دوره
-            </button>
+            </button> */}
           </div>
           <div className="leading-8 h-96 p-6 w-6/12">
             <div>ارائه دهنده: آیوتگ</div>
@@ -59,11 +64,14 @@ export default function SubLearningRaspberrypi() {
           </div>
 
           <div>
-            تومان<p></p>
-            تومان<p></p>
+            <p> 2800000 تومان</p>
+            <p>2600000 تومان</p>
           </div>
         </div>
-        <button className="  flex justify-center w-6/12 rounded-full bg-blue-500 text-white py-2 px-4 mx-auto items-center space-x-4">
+        <button
+          onClick={() => increaseCartQuantity(props.id)}
+          className="  flex justify-center w-6/12 rounded-full bg-blue-500 text-white py-2 px-4 mx-auto items-center space-x-4"
+        >
           <p>افزودن به سبد سفارش</p>
           <FaCartPlus />
         </button>

@@ -35,7 +35,7 @@ export default function LearningBody() {
         {/* <ArticleCarts/> */}
       {/* </div> */}
         <div className={styled.Products}> 
-        <ProductsCart/>
+        <ProductsCart id={0} />
        </div> 
        <Footer/>
     </div>

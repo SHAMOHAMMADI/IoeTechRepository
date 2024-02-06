@@ -13,6 +13,7 @@ import { UserContext } from "../../src/component/Context/UserContextProvider";
 import { Link } from "react-router-dom";
 import NavBar from "../component/NavBar";
 import axios from "axios";
+import { resourceLimits } from "worker_threads";
 // import TestSign from "./testSign";
 
 export type signProps = {
@@ -28,9 +29,8 @@ export type User = {
 };
 
 export default function Login() {
-  const LoginUseContext = useContext(LoginContext);
-  const userContext = useContext(UserContext);
-
+  // const LoginUseContext = useContext(LoginContext);
+  // const userContext = useContext(UserContext);
   const [inputs, setInputs] = useState({
     name: "",
     lname: "",
@@ -70,7 +70,7 @@ export default function Login() {
       email: email,
     });
 
-    Navigate("/profile");
+    Navigate("/");
     // setUser({
     //   name: name,
     //   lName: lname,
@@ -78,14 +78,14 @@ export default function Login() {
     //   email: email,
     // });
 
-    LoginUseContext.setIsLogin(true);
-    userContext.setUser(() => {});
+    // LoginUseContext.setIsLogin(true);
+    // userContext.setUser(() => {});
   };
-  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
+  // const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {};
 
-  const goToSecondsComp = () => {
-    // This will navigate to second component
-  };
+  // const goToSecondsComp = () => {
+  //   // This will navigate to second component
+  // };
 
   return (
     <>

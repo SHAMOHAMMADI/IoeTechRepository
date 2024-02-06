@@ -3,7 +3,7 @@ import { CgBorderStyleDashed } from "react-icons/cg";
 import styled from "./ProductsCart.module.css";
 
 export type ProductsCartProps = {
-  id?: number;
+  id?: any;
   image?: string;
   title?: string;
   oldPrice?: number;

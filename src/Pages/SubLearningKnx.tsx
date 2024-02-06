@@ -5,14 +5,19 @@ import LearningComponent from "../component/LearningComponent";
 import styled from "./Learning.module.css";
 import LogoBanner from "../component/LogoBanner";
 import { FaCartPlus } from "react-icons/fa";
+import { useShoppingCart } from "../component/Context/ShoppingCartContext";
+import { ProductsCartProps } from "../component/ProductCartData";
 
-export default function SubLearningKnx() {
+export default function SubLearningKnx(props: ProductsCartProps) {
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
+    useShoppingCart();
+
   return (
     <>
       <NavBar />
       <div className={styled.Learning}>
-        <div className="bg-blue-300 text-right w-full border-2 flex justify-end h-fit">
-          <div className="bg-gray-600 border-2 w-5/12 p-4 h-fit mt-16 absolute left-8 mx-auto overflow-visible xl:h-72">
+        <div className="bg-blue-300 text-right w-full border-2 flex justify-end ">
+          <div className="bg-gray-600 border-2 w-5/12 p-2 h-80 mt-8 absolute left-8 mx-auto overflow-visible xl:h-72">
             {/* <iframe
               className="w-full h-48"
               src="https://freebies.faradars.org/video/fvee9310/720/fvee9310-00_intro.mp4"
@@ -21,7 +26,7 @@ export default function SubLearningKnx() {
             <iframe
               src="https://www.aparat.com/video/video/embed/videohash/wEDtA/vt/frame?titleShow=true&autoplay=true&recom=self"
               allow="play"
-              className="w-full h-48"
+              className="w-11/12 h-80 mx-auto"
               // webkitallowfullscreen="true"
               // mozallowfullscreen="true"
             ></iframe>
@@ -33,9 +38,9 @@ export default function SubLearningKnx() {
               height="400"
               width="600"
             ></iframe> */}
-            <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
+            {/* <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
               سفارش دوره
-            </button>
+            </button> */}
           </div>
           <div className="leading-8 h-fit p-6 w-6/12 ">
             <div>ارائه دهنده: آیوتگ</div>
@@ -70,15 +75,18 @@ export default function SubLearningKnx() {
         <div className="h-fit shadow-md w-11/12 m-4 flex flex-row-reverse leading-10 justify-evenly items-center mx-auto ">
           <div className="flex justify-center flex-col items-center py-4">
             <p>هزینه آموزش</p>
-            <p>تخفیف</p>
+            <p> با تخفیف</p>
           </div>
 
           <div>
-            تومان<p></p>
-            تومان<p></p>
+            <p> تومان 3600000</p>
+            <p>3400000 تومان</p>
           </div>
         </div>
-        <button className="  flex justify-center w-6/12 rounded-full bg-blue-500 text-white py-2 px-4 mx-auto items-center space-x-4">
+        <button
+          onClick={() => increaseCartQuantity(props.id)}
+          className="  flex justify-center w-6/12 rounded-full bg-blue-500 text-white py-2 px-4 mx-auto items-center space-x-4"
+        >
           <p>افزودن به سبد سفارش</p>
           <FaCartPlus />
         </button>

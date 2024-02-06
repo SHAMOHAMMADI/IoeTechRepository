@@ -8,7 +8,7 @@ import { FaStar } from "react-icons/fa";
 import Footer from "../component/Footer";
 import ProductsCart from "../component/ProductsCart";
 
-const SubProducts = () => {
+const SubArticle = () => {
   const [data, setData] = useState<ProductsCartProps>({});
   const params = useParams();
   const [counter, setCounter] = useState(0);
@@ -48,4 +48,4 @@ const SubProducts = () => {
   );
 };
 
-export default SubProducts;
+export default SubArticle;

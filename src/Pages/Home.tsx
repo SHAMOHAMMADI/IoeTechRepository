@@ -26,7 +26,10 @@ import img5 from "../back3.png";
 import ras from "../hero.webp";
 import rasLogo from "../rasLogo.png";
 import banner3 from "../banner3.png";
-import { AppContext } from "../../src/App";
+// import { AppContext } from "../../src/App";
+import StoreItems from "../component/storeItems";
+
+
 export type websiteProps = {
   id?: number;
   company?: string;
@@ -89,6 +92,24 @@ export default function Home({
         <img src={banner3} alt="" />
         {/* <button>خرید</button> */}
       </div>
+
+
+
+
+
+
+      {/* <div className="flex h-36 w-full justify-center items-center font-bold">
+      <StoreItems id={0}  price={5} />
+      </div> */}
+      
+
+
+
+
+
+
+
+
       <div className={styled.secondBanner}>
         <div>
           <img src={img1} alt="no image" />

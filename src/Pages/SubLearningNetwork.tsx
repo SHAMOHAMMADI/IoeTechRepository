@@ -5,26 +5,33 @@ import LearningComponent from "../component/LearningComponent";
 import styled from "./Learning.module.css";
 import LogoBanner from "../component/LogoBanner";
 import { FaCartPlus } from "react-icons/fa";
+import { useShoppingCart } from "../component/Context/ShoppingCartContext";
+import { ProductsCartProps } from "../component/ProductCartData";
 
-export default function SubLearningNetwork() {
+export default function SubLearningNetwork(props: ProductsCartProps) {
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
+    useShoppingCart();
+
   return (
     <>
       <NavBar />
       <div className={styled.Learning}>
-        <div className="bg-blue-300 text-right w-full border-2 flex justify-end ">
-          <div className="bg-gray-600 border-2 w-5/12 p-4 h-96 mt-16 absolute left-8 mx-auto overflow-visible ">
-            <video
-              autoPlay
-              className="w-full"
-              src="https://freebies.faradars.org/video/fvee9310/720/fvee9310-00_intro.mp4"
-            ></video>
-            <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
+        <div className="bg-blue-300 text-right w-fullborder-2 flex justify-end ">
+          <div className="bg-gray-600 border-2 border-blue-600 w-5/12  aspect-ratio p-2 mt-8 absolute left-8 mx-auto overflow-visible ">
+            <iframe
+              src="https://www.aparat.com/video/video/embed/videohash/qZltP/vt/frame"
+              allow="true"
+              className="w-11/12 h-80 mx-auto"
+              // webkitallowfullscreen="true"
+              // mozallowfullscreen="true"
+            ></iframe>
+            {/* <button className="flex justify-center w-full rounded-full bg-blue-500 text-white py-2 px-4 mx-auto my-4">
               سفارش دوره
-            </button>
+            </button> */}
           </div>
           <div className="leading-8 h-96 p-6 w-6/12">
             <div>ارائه دهنده: آیوتگ</div>
-            <div>AVR آموزش مقدماتی</div>
+            <div> آموزش مقدماتی شبکه</div>
             <div> 95% (27,788 رای) سطح: مقدماتی</div>
             <div>
               زمان مورد نیاز برای گذارندن دوره: 57 ساعت مجموع محتوای آموزشی: 5
@@ -59,11 +66,14 @@ export default function SubLearningNetwork() {
           </div>
 
           <div>
-            تومان<p></p>
-            تومان<p></p>
+            <p> 2600000 تومان</p>
+            <p>2400000 تومان</p>
           </div>
         </div>
-        <button className="  flex justify-center w-6/12 rounded-full bg-blue-500 text-white py-2 px-4 mx-auto items-center space-x-4">
+        <button
+          onClick={() => increaseCartQuantity(props.id)}
+          className="  flex justify-center w-6/12 rounded-full bg-blue-500 text-white py-2 px-4 mx-auto items-center space-x-4"
+        >
           <p>افزودن به سبد سفارش</p>
           <FaCartPlus />
         </button>

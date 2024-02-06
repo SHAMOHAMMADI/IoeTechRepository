@@ -15,11 +15,23 @@ import { UserContext } from "./Context/UserContextProvider";
 import { LoginContext } from "./Context/LoginUserContext";
 import { useEffect } from "react";
 import axios from "axios";
+import { User } from "../Pages/SignUp";
+import { myProps } from "../App";
+// import { AppContext } from "../App";
+import { setUncaughtExceptionCaptureCallback } from "process";
+import { useShoppingCart } from "./Context/ShoppingCartContext";
 
 export interface NavBarProps {
   onClick?: () => void;
   isInitiallyOpen?: boolean;
 }
+
+type UserProps = {
+  firstname?: any;
+  lastname?: string;
+  email?: string;
+  password?: number;
+};
 
 export default function NavBar(props: NavBarProps) {
   const { onClick, isInitiallyOpen } = props;
@@ -27,18 +39,32 @@ export default function NavBar(props: NavBarProps) {
   const [data, setData] = useState();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [quantity, setQuantity] = useState(0);
+
+  /////////////
+  const { openCart, cartQuantity } = useShoppingCart();
+
+  ////////////
 
   const handleClick = () => {
     setIsOpen((open) => !open);
     // onClick && onClick();
   };
 
+  const [test, setTest] = useState();
+  console.log(test);
   useEffect(() => {
     document.title = "327578";
-  }, []);
 
+    console.log("test");
+  }, []);
   const userContext = useContext(UserContext);
   const LoginUserContext = useContext(LoginContext);
+
+  // const Lo = useContext<myProps>(AppContext);
+
+  // console.log(Lo.setCart(2))
+
   return (
     <div className={styled.AllNavBar}>
       <div className={styled.ad}></div>
@@ -52,12 +78,14 @@ export default function NavBar(props: NavBarProps) {
             </div>
             <div className={styled.Menu}>
               <div className={styled.basket}>
-                <Link to="/profile">
-                  <button>
-                    <div className="bg-[#ff0000] w-4 h-4 absolute top-[-5px] left-[-5px] rounded"></div>
+                {/* <Link to="/profile"> */}
+                  <button onClick={()=>openCart}>
+                    <div className="text-white flex justify-center items-center bg-[#ff0000] w-4 h-4 absolute top-[-5px] left-[-5px] rounded">
+                      {cartQuantity}
+                    </div>
                     <RiShoppingCartLine />
                   </button>
-                </Link>
+                {/* </Link> */}
                 <button
                   onClick={() => {
                     LoginUserContext.setIsLogin(false);

@@ -26,50 +26,63 @@ import SubProducts from "./Pages/SubProducts";
 import Profile from "./Pages/Profile";
 import SubArticle from "./Pages/SubArticle";
 import UserFinds from "./Pages/UserFinds";
+import { ShoppingCartProvider } from "./component/Context/ShoppingCartContext";
 
-export type myProps = [isLogin?: boolean, setIsLogin?: () => void];
+export type myProps = {
+  isLogin?: boolean;
+  setIsLogin?: React.Dispatch<React.SetStateAction<boolean>>;
+  cart?: number;
+  setCart: React.Dispatch<React.SetStateAction<number>>;
+};
 // export  const AppContext = createContext<myProps>({
 //   isLogin : true,
 //   setIsLogin : ()=>void
 // });
 
-export const AppContext = createContext({} as myProps);
+// export const AppContext = createContext<myProps>({}
+// );
 
 function App() {
-  const [isLogin, setIsLogin] = useState<boolean>(false);
-  const [cart, setCart] = useState<boolean>(false);
+  const [isLogin, setIsLogin] = useState(true);
+  const [cart, setCart] = useState<myProps>();
 
   return (
     <div className="App">
       {/* <UserContextProvider> */}
       {/* <LoginUserContextProvider> */}
-      {/* <AppContext.Provider value={{ isLogin, setIsLogin }}> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/article" element={<Article />} />
-        <Route path="/Learning" element={<Learning />} />
-        <Route path="/shopping" element={<ShoppingPage />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Test4" element={<Test4 />} />
-        <Route path="/subarticle/:id" element={<SubArticle />} />
-        <Route path="/SubLearning" element={<SubLearning />} />
-        <Route path="/SubLearningknx" element={<SubLearningKnx />} />
-        <Route path="/subproducts/:id" element={<SubProducts />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/userfinds" element={<UserFinds />}></Route>
-        <Route
-          path="/SubLearningraspberrypi"
-          element={<SubLearningRaspberrypi />}
-        />
+      <ShoppingCartProvider >
 
-        <Route path="/SubLearningnetwork" element={<SubLearningNetwork />} />
-        <Route path="/SubLearningprotocol" element={<SubLearningProtocol />} />
-      </Routes>
+      {/* <AppContext.Provider value={{ isLogin, setIsLogin, cart, setCart }}> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/article" element={<Article />} />
+          <Route path="/Learning" element={<Learning />} />
+          <Route path="/shopping" element={<ShoppingPage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Test4" element={<Test4 />} />
+          <Route path="/subarticle/:id" element={<SubArticle />} />
+          <Route path="/SubLearning" element={<SubLearning />} />
+          <Route path="/SubLearningknx" element={<SubLearningKnx />} />
+          <Route path="/subproducts/:id" element={<SubProducts />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/userfinds" element={<UserFinds />}></Route>
+          <Route
+            path="/SubLearningraspberrypi"
+            element={<SubLearningRaspberrypi />}
+          />
+
+          <Route path="/SubLearningnetwork" element={<SubLearningNetwork />} />
+          <Route
+            path="/SubLearningprotocol"
+            element={<SubLearningProtocol />}
+          />
+        </Routes>
       {/* </AppContext.Provider> */}
+      </ShoppingCartProvider>
       {/* </LoginUserContextProvider> */}
       {/* </UserContextProvider> */}
     </div>

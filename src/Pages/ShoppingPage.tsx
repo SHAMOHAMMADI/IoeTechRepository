@@ -21,7 +21,7 @@ export default function ShoppingPage({ shoppingItems }: Props) {
       <NavBar />
       <LogoBanner />
       <div>
-        <ProductsCart />
+        <ProductsCart id={0}/>
       </div>
       <Footer />
     </>
